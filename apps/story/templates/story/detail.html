@@ -12,7 +12,7 @@
             
                 <hr>
 
-                {% if not story.created_by == request.user %}<a href="{% url 'vote' story.id %}?next_page=story" class="button is-success">Vote</a>{% endif %}
+                {% if not story.created_by == request.user %}<a class="btn btn-info" href="{% url 'vote' story.id %}?next_page=story" class="button is-success">Vote</a>{% endif %}
             </div>
         </div>
 
@@ -49,10 +49,11 @@
 
                         <div class="field">
                             <div class="field">
-                                <button class="button is-success">Submit</button>
+                                <button class="btn btn-primary">Comment</button>
                             </div>
                         </div>
                     </form>
+                        <br>
                 {% else %}
                     <p>Please log in to comment!</p>
                 {% endif %}
